@@ -1,0 +1,33 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+<script src="http://code.jquery.com/ui/1.11.2/jquery-ui.js"></script>
+<script>
+$(document).ready(function(){
+   $("#col").change(function(){
+       var Col = $("#col").val()
+       document.bgColor=Col;
+   })
+})
+</script>
+<style >
+      div{background-color: azure;text-align: center;margin-top: 10pt;height: 70px;width: 80px;margin-top: 210pt;margin-left: 430pt;}
+    select{text-align: center;margin-top: 18pt;}
+</style>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body >
+    <div>
+        <select id="col">
+            <option value="Red">Red</option>
+            <option value="blue">blue</option>
+            <option value="black">black</option>
+            <option value="purple">purple</option>
+            
+        </select>
+</div>
+</body>
+</html>

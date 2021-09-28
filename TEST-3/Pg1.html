@@ -1,0 +1,89 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <script>
+    var stockid=[];
+    var City=["Pune","Hydrebad","Rajasthan","Bangalore"]; 
+
+    function show() {
+            var result = "";
+            result += "Stock Id  " + stock.stockid.value  + "<br/>";
+            result += "Item Name  " + stock.ItemName.value + "<br/>";
+            result += "Quantity Available  " + stock.Quant.value + "<br/>";
+            result += "Item Description  " + stock.Description.value + "<br/>";
+            result += "City  " + stock.city.value + "<br/>";
+            result += "ZipCode " + stock.ZipCode.value + "<br/>";
+            document.getElementById("result").innerHTML = result;
+        }
+     function Stockid() {
+         
+     }
+    </script>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body >  
+    <form name="stock">
+    <table border="3" align="center">
+        <tr>
+            <th>Stock Id</th>
+            <td>
+              <input type="text" name="stockid" />
+
+            </td>
+        </tr>
+        <tr>
+            <th>Item Name</th>
+            <td>
+                <input type="text" placeholder="Enter Item Name" name="ItemName" />
+                
+            </td>
+        </tr>
+        <tr>
+            <th>Quantity Available</th>
+            <td>
+               <input type="text" placeholder="Enter the Quantity Available" name="Quant" />
+            </td>
+        </tr>
+        <tr>
+            <th>Item Description</th>
+            <td>
+               <input type="text" placeholder="Enter Description"  name="Description" />
+
+            </td>
+        </tr>
+        <tr>
+            <th>City</th>
+            <td>
+                <select>
+                    <option value=Pune>Pune</option>
+                    <option value=Hydrebad>Hydrebad</option>
+                    <option value=Rajasthan>Rajasthan</option>
+                    <option value=Bangalore>Bangalore</option>
+                    </select>
+            </td>
+        </tr>
+        <tr>
+            <th>Zip Code</th>
+            <td>
+               <input type="text" placeholder="Enter Zip Code" name="ZipCode" />
+            </td>
+        </tr>
+      
+        <tr>
+            <th colspan="2">
+                <input type="button" value="Show" onclick="show()" />
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <input type="button" value="Reset" />
+            </th>
+        </tr>
+
+    </table>
+</form>
+<span id="result">
+
+</span>
+
+</body>
+</html>
