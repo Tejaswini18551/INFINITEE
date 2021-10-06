@@ -1,0 +1,173 @@
+1.ANS)    Compiling and Execution procedure of Java Application.
+
+         a) Create a Java Program:
+	
+	We can create a java program in any ide.After Creating a javaprogram We can edit in the Ide.
+	When the java program is greated a file with .java extension file will be created .
+	This .java file consists of java source code.
+
+         b)   Compiling a Java Program
+
+	The .java file is compiled by the compiler after executing the javac command, 
+	if no errors occur in our program we get a .class file which contains the bytecode. 
+	It means that the compiler has successfully converted Java source code to bytecode.
+	 Generally bytecode is been used by the JVM to run a particular application. 
+	The final bytecode created is the executable file which only JVM understands.
+
+	c)  Program loading into memory by JVM:-
+
+	 There is a class loader present in the JVM whose main functionality is to load the .
+	class file into the primary memory for the execution. All the .class files required by our program for the execution 
+	 is been loaded by the class loader into the memory just before the execution.
+
+	  ByteCode Verification
+	In order to maintain security of the program JVM has bytecode verifier. 
+	After the classes are loaded in to memory ,it gets verified.
+
+	 4 )  Execution of Java program : -
+
+	These frequent executable bytecodes parts are being translated to
+	 faster machine language code by Java HotSpot compiler.One in which source code is translated to bytecodes and 
+	second when hot spot parts of bytecodes are translated to machine language.
+
+     
+2.ANS)
+ABSTRACT CLASS -  A Class which is Declared with abstract keywords is known as abstarct class. It is the class that cannot be used to create objects.
+
+INTERFACE - Interface is a blueprint of a class.it is used to achieve abstraction and multiple inheritance in java.
+
+Differences between interfaces and Abstarct Classes
+
+                                    Abstarct Class                                                        Interfaces
+
+
+          a. Abstarct class doesnt support multiple inheritacnce                     a. Interfaces support multiple inheritance
+
+          b. Abstarct keyword is used to declare abstarct class                      b.Interfaces keyword used to declare interfaces
+
+          c. it can have class members like private,protected ,etc                   c.interface are public by default
+
+          d.abstarct classes are fast                                                d. interfaces are slow
+ 
+          e. Abstarct classes contain constructors                                   e. Interfaces doesnt contain constructors.
+
+
+8.ANS)
+
+a)-->  Private Class:  
+
+		The private access modifier is accessible only within the same class.
+		We can't assign private to outer class and interface.
+		The best use of private keyword is to create a fully encapsulated class in Java by making
+		 all the data members of that class private.
+
+
+Private Class Code Example:
+
+		class Sum{  
+	private int sum=40;  
+	private void msg(){System.out.println("Hello java");}  
+	}  
+  
+	public class Simple{  
+	 public static void main(String args[]){  
+  	 Sum obj=new Sum();  
+   	System.out.println(obj.Sum);//Private Class Cannot Be Inherited 
+   	obj.msg();//Private Class Cannot Be Inherited
+   	}  
+	}  
+
+2)-->  Public Class:
+
+		The public access modifier is accessible everywhere. It has the widest scope among all other modifiers
+
+Public Class Code Example:
+
+		//Package 1
+	package Example;
+	
+	public class A{
+	
+	public void msg(){
+	
+	System.out.println("Hello");
+	}
+}
+
+		//Package 2
+	package Demo;
+	
+	class b{
+	
+	public static void main(String[] args){
+	
+	A obj=new A(){
+	obj.msg();
+	}
+
+}		
+
+Output: Hello
+
+3)--->  Protected Class:
+
+		The protected access modifier is accessible within package and outside the package but through inheritance only.
+		The protected access modifier can be applied on the data member, method and constructor. 
+		It can't be applied on the class.
+
+Protected Class Code:
+
+		//Package 1
+
+	package Demo1;
+	public class First{
+	protected void msg(){
+	System.out.println("Hello");
+	}
+}
+
+		//Package 2
+	package Demo2;
+	import pack.*;
+
+	class B extends A{
+	public static void main(String args[]){  
+  	 B obj = new B();  
+  	 obj.msg();  
+ 	 }  
+	}  
+
+Output:Hello
+
+
+
+4)--->  Friendly Class:
+
+		If you don't use any modifier, it is treated as default by default. 
+		The default modifier is accessible only within package. 
+		It cannot be accessed from outside the package. It provides more accessibility than private. 
+		But, it is more restrictive than protected, and public.
+
+		//Package 1
+	package Demo1;  
+	class First{  
+  		void msg()
+{
+System.out.println("First Package");
+}  
+	}  
+
+	//Package 2
+ 
+	package Demo2;  
+	import pack.*;  
+	class Second{  
+  		public static void main(String args[]){  
+   		A obj = new A();	// Default class cannot be accessed from another package 
+   		obj.msg();//  		//Default class cannot be accessed from another package
+  		}  
+	}
+
+	Output:  In the above example, the scope of class First and its method msg() 
+		is default so it cannot be accessed from outside the package.
+

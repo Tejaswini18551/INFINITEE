@@ -1,0 +1,407 @@
+Java Multiple Choice Questions
+
+1) Which of the following option leads to the portability and security of Java?
+
+1. Bytecode is executed by JVM
+2. The applet makes the Java code secure and portable
+3. Use of exception handling
+4. Dynamic binding between objects
+
+ Ans : 1. Bytecode is executed by JVM
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+2) Which of the following is not a Java features?
+
+1. Dynamic
+2. Architecture Neutral
+3. Use of pointers
+4. Object-oriented
+
+Ans : 3. Use of pointers
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+3) What should be the execution order, if a class has a method, static block, instance block, and constructor, as shown below?
+ public class First_C {  
+       public void myMethod()   
+     {  
+    System.out.println("Method");  
+     }  
+     
+     {  
+    System.out.println(" Instance Block");  
+    }  
+           
+     public void First_C()  
+    {  
+    System.out.println("Constructor ");  
+     }  
+     static {  
+         System.out.println("static block");  
+     }  
+     public static void main(String[] args) {  
+     First_C c = new First_C();  
+     c.First_C();  
+     c.myMethod();  
+   }  
+ }   
+1. Instance block, method, static block, and constructor
+2. Method, constructor, instance block, and static block
+3. Static block, method, instance block, and constructor
+4. Static block, instance block, constructor, and method
+
+Ans : 4 . Static block, instance block, constructor, and method
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+4) What will be the output of the following program?
+Java Try Catch
+1. public class MyFirst {  
+2.       public static void main(String[] args) {  
+3.          MyFirst obj = new MyFirst(n);  
+4.  }  
+5.  static int a = 10;  
+6.  static int n;  
+7.  int b = 5;  
+8.  int c;  
+9.  public MyFirst(int m) {  
+10.        System.out.println(a + ", " + b + ", " + c + ", " + n + ", " + m);  
+11.    }  
+12. // Instance Block  
+13.   {  
+14.      b = 30;  
+15.      n = 20;  
+16.   }   
+17. // Static Block  
+18.   static   
+19. {  
+20.           a = 60;  
+21.      }   
+22.  }  
+1. 10, 5, 0, 20, 0
+2. 10, 30, 20
+3. 60, 5, 0, 20
+4. 60, 30, 0, 20, 0
+
+
+Ans :  4 . 60, 30, 0, 20, 0
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+6) _____ is used to find and fix bugs in the Java programs.
+1. JVM
+2. JRE
+3. JDK
+4. JDB
+Ans : 4 . JDB
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+8) What is the return type of the hashCode() method in the Object class?
+1. Object
+2. int
+3. long
+4. void
+Ans : 2 . int
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+9) Which of the following is a valid long literal? 
+
+ Ans : 0xnf029L
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+10) What does the expression float a = 35 / 0 return?
+1. 0
+2. Not a Number
+3. Infinity
+4. Run time exception
+
+         Ans : 3. Infinity
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+11) Evaluate the following Java expression, if x=3, y=5, and z=10:
+++z + y - y + z + x++
+1. 24
+2. 23
+3. 20
+4. 25
+
+Ans : 4. 25
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+12) What will be the output of the following program?
+1. public class Test {  
+2. public static void main(String[] args) {  
+3.     int count = 1;  
+4.     while (count <= 15) {  
+5.     System.out.println(count % 2 == 1 ? "***" : "+++++");  
+6.     ++count;  
+7.         }      // end while  
+8.     }       // end main   
+9.  }  
+1. 15 times ***
+2. 15 times +++++
+3. 8 times *** and 7 times +++++
+4. Both will print only once
+
+Ans :  3 ) 8 times *** and 7 times +++++
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+13) Which of the following tool is used to generate API documentation in HTML format from doc comments in source code?
+1. javap tool
+2. javaw command
+3. Javadoc tool
+4. javah command
+
+           Ans : 3. Javadoc tool
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+14) Which of the following creates a List of 3 visible items and multiple selections abled?
+1. new List(false, 3)
+2. new List(3, true)
+3. new List(true, 3)
+4. new List(3, false)
+
+Ans : 2.  new List(3, true)
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+15) Which of the following for loop declaration is not valid?
+1. for ( int i = 99; i >= 0; i / 9 )
+2. for ( int i = 7; i <= 77; i += 7 )
+3. for ( int i = 20; i >= 2; - -i )
+4. for ( int i = 2; i <= 20; i = 2* i )
+
+Ans :  1.  for ( int i = 99; i >= 0; i / 9 )
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+16) Which method of the Class.class is used to determine the name of a class represented by the class object as a String?
+1. getClass()
+2. intern()
+3. getName()
+4. toString()
+
+              Ans : 3.   getName()
+------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+17) In which process, a local variable has the same name as one of the instance variables?
+1. Serialization
+2. Variable Shadowing
+3. Abstraction
+4. Multi-threading
+
+Ans : 2 .  Variable Shadowing
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+20) What do you mean by nameless objects?
+1. An object created by using the new keyword.
+2. An object of a superclass created in the subclass.
+3. An object without having any name but having a reference.
+4. An object that has no reference.
+
+Ans :  4 .   An object that has no reference.
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+21) An interface with no fields or methods is known as a ______.
+1. Runnable Interface
+2. Marker Interface
+3. Abstract Interface
+4. CharSequence Interface
+
+  Ans : 2 .  Marker Interface
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+23) Which option is false about the final keyword?
+1. A final method cannot be overridden in its subclasses.
+2. A final class cannot be extended.
+3. A final class cannot extend other classes.
+4. A final method can be inherited.
+
+             Ans :  3 .  A final class cannot extend other classes.
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+24) Which of these classes are the direct subclasses of the Throwable class?
+1. RuntimeException and Error class
+2. Exception and VirtualMachineError class
+3. Error and Exception class
+4. IOException and VirtualMachineError class
+
+Ans : 3 . Error and Exception class
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+
+25) What do you mean by chained exceptions in Java?
+1. Exceptions occurred by the VirtualMachineError
+2. An exception caused by other exceptions
+3. Exceptions occur in chains with discarding the debugging information
+4. None of the above
+
+Ans  :  2 . An exception caused by other exceptions
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+26) In which memory a String is stored, when we create a string using new operator?
+1. Stack
+2. String memory
+3. Heap memory
+4. Random storage space
+
+             Ans : 3 . Heap memory
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+27) What is the use of the intern() method?
+1. It returns the existing string from memory
+2. It creates a new string in the database
+3. It modifies the existing string in the database
+4. None of the above
+
+Ans : 1 . It returns the existing string from memory
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+28) Which of the following is a marker interface?
+1. Runnable interface
+2. Remote interface
+3. Readable interface
+4. Result interface
+             Ans : 2 . Remote interface
+
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+30) Which keyword is used for accessing the features of a package?
+1. package
+2. import
+3. extends
+4. export
+
+Ans : 2 . import
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+
+31) In java, jar stands for_____.
+1. Java Archive Runner
+2. Java Application Resource
+3. Java Application Runner
+4. None of the above
+
+Ans : 4 . None of the above
+
+=====================================================================================================================================================
+
+1. public class Test2 {  
+2.     public static void main(String[] args) {  
+3.         StringBuilder s1 = new StringBuilder("Complete");  
+4.         s1.setCharAt(1,'i');  
+5.         s1.setCharAt(7,'d');  
+6.         System.out.println(s1);  
+7.      }  
+8.  }  
+1. Complete
+2. Iomplede
+3. Cimpletd
+4. Coipletd
+Ans : 3 . Cimpletd
+33) Which of the following is false?
+1. The rt.jar stands for the runtime jar
+2. It is an optional jar file
+3. It contains all the compiled class files
+4. All the classes available in rt.jar is known to the JVM
+
+               Ans : 2 . It is an optional jar file
+
+-----------------------------------------------------------------------------------------------------------------------------------------------
+
+36) Given that Student is a class, how many reference variables and objects are created by the following code?
+1. Student studentName, studentId;  
+2. studentName = new Student();  
+3. Student stud_class = new Student();   
+1. Three reference variables and two objects are created.
+2. Two reference variables and two objects are created.
+3. One reference variable and two objects are created.
+4. Three reference variables and three objects are created.
+
+Ans : 1 . Three reference variables and two objects are created.
+
+=======================================================================================================================================================
+
+38) Given,
+1. ArrayList list = new ArrayList();  
+What is the initial quantity of the ArrayList list?
+1. 5
+2. 10
+3. 0
+4. 100
+
+Ans : 2  . 10
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+
+39) Which of the following is a mutable class in java?
+1. java.lang.String
+2. java.lang.Byte
+3. java.lang.Short
+4. java.lang.StringBuilder
+ Ans : 4. java.lang.StringBuilder
+
+40) What will be the output of the following program?
+1. abstract class MyFirstClass  
+2. {  
+3.      abstract num (int a, int b) {  }  
+4. }  
+1. No error
+2. Method is not defined properly
+3. Constructor is not defined properly
+4. Extra parentheses
+
+Ans : 2 . Method is not defined properly
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------
+
+42) Given,
+1. int values[ ] = {1,2,3,4,5,6,7,8,9,10};  
+2. for(int i=0;i< Y; ++i)  
+3. System.out.println(values[i]);  
+Find the value of value[i]?
+1. 10
+2. 11
+3. 15
+4. None of the above
+
+Ans : 4 . None of the above
+
+-----------------------------------------------------------------------------------------------------------------------------------------
+
+44) How many threads can be executed at a time?
+1. Only one thread
+2. Multiple threads
+3. Only main (main() method) thread
+4. Two threads
+
+              Ans : 2 . Multiple threads
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+48) What is the result of the following program?
+1. public static synchronized void main(String[] args) throws  
+2. InterruptedException {  
+3.      Thread f = new Thread();  
+4.       f.start();  
+5.       System.out.print("A");  
+6.       f.wait(1000);  
+7.       System.out.print("B");  
+8. }  
+1. It prints A and B with a 1000 seconds delay between them
+2. It only prints A and exits
+3. It only prints B and exits
+4. A will be printed, and then an exception is thrown.
+
+        Ans :  4 . A will be printed, and then an exception is thrown.
+
