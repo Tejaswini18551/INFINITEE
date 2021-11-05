@@ -1,0 +1,74 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html">
+
+	<h:head>
+        <title>Menu Details</title>
+          <style type="text/css">                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
+            table {
+                border-collapse: collapse;
+                width: 100%;
+            }
+            th, td {
+                text-align: left;
+                padding: 8px;
+            }
+
+            tr:nth-child(even){background-color: #f2f2f2}
+            th {
+                background-color: #4CAF50;
+                color: white;
+            }
+        </style>
+    </h:head>
+	    <h:body>
+        <h:form>
+            <center>
+                <h2><h:outputText value="Menu Records"/></h2>
+            </center>
+            <h:dataTable value="#{menuDao.showMenu()}" var="e">
+                <h:column>
+                    <f:facet name="header">Menu Id</f:facet>
+                    <h:outputText value="#{e.menuId}"/>
+                </h:column>
+                <h:column>
+                    <f:facet name="header">Menu Item</f:facet>
+                    <h:outputText value="#{e.menuItem}"/>
+                </h:column>
+                <h:column>
+                    <f:facet name="header">Menu Price</f:facet>
+                    <h:outputText value="#{e.menuPrice}"/>
+                </h:column>
+                <h:column>
+                    <f:facet name="header">Menu Calories</f:facet>
+                    <h:outputText value="#{e.menuCalories}"/>
+                </h:column>
+                 <h:column>
+                    <f:facet name="header">Menu Type</f:facet>
+                    <h:outputText value="#{e.menuType}"/>
+                </h:column>
+                <h:column>
+                    <f:facet name="header">Menu Status</f:facet>
+                    <h:outputText value="#{e.menuStatus}"/>
+                </h:column>
+                <h:column>
+                    <f:facet name="header">Menu Rating</f:facet>
+                    <h:outputText value="#{e.menuRating}"/>
+                </h:column>
+                <h:column>
+                <f:facet name="header">Update</f:facet>  
+            <h:commandButton action = "#{menuDao.searchMenu(e)}" value="Update" class="btn btn-primary">  
+</h:commandButton>   
+</h:column>
+<h:column>  
+<f:facet name="header">Delete</f:facet>  
+<h:commandButton action = "#{menuDao.deleteMenu(e.menuId)}" value="Delete" class="btn btn-danger">  
+</h:commandButton>  
+                </h:column>
+            </h:dataTable>
+            <center><h:commandButton action = "addMenu.xhtml?faces-redirect=true" value="Create New Menu" class="btn btn-success"></h:commandButton> </center>
+        </h:form>
+    </h:body>
+</html>

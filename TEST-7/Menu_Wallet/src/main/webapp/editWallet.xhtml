@@ -1,0 +1,25 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html">
+	<h:body>
+	<h1>Wallet Form</h1>
+
+	<h:form>
+      
+       Customer Id
+        <h:inputText value="#{editWallet.cusId}" />
+		<br />
+		<br />
+ 		Wallet Amount: 
+        <h:inputText value="#{editWallet.walAmount}" />
+		<br />
+		<br />
+      Wallet Source:
+        <h:inputText value="#{editWallet.walSource}" />
+		<br />
+		<br />
+		<h:commandButton value="Submit" action="#{walletDao.updateWallet(editWallet)}" />
+	</h:form>
+	</h:body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html">
+
+	<h:body>
+<h:form>
+   <center>
+  
+   	      Menu Item: 
+        <h:inputText value="#{menu.menuItem}" />
+		<br />
+		<br />
+         Menu Price : 
+        <h:inputText value="#{menu.menuPrice}" />
+		<br />
+		<br />
+        Menu Calories : 
+        <h:inputText value="#{menu.menuCalories}" />
+		<br />
+		<br />
+		Menu Type : 
+        <h:inputText value="#{menu.menuType}" />
+		<br />
+		<br /> 
+		Menu Status: 
+        <h:inputText value="#{menu.menuStatus}" />
+		<br />
+		<br />
+       Menu Rating: 
+        <h:inputText value="#{menu.menuRating}" />
+		<br />
+		<br />
+		
+       
+		<h:commandButton value="Submit" action="#{menuDao.addMenu(menu)}" />
+    	</center>
+ 		</h:form> 
+</h:body>
+</html>

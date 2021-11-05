@@ -1,0 +1,62 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html">
+	 <h:head>
+        <title>User Details</title>
+          <style type="text/css">                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
+            table {
+                border-collapse: collapse;
+                width: 100%;
+            }
+            th, td {
+                text-align: left;
+                padding: 8px;
+            }
+
+            tr:nth-child(even){background-color: #FF9966}
+            th {
+                background-color: #FF9966;
+                color: white;
+            }
+        </style>
+    </h:head>
+    	<h:body>
+    		<h:form>
+    			<center>
+    				<h2><h:outputText value="Wallet Records"/></h2>
+    				
+    			</center>
+    			 <h:dataTable value="#{walletDao.showWallet()}" var="u">
+    			  <h:column>
+                    <f:facet name="header">Customer ID</f:facet>
+                    <h:outputText value="#{u.cusId}"/>
+                </h:column>
+                 <h:column>
+                    <f:facet name="header">Wallet Id</f:facet>
+                    <h:outputText value="#{u.walId}"/>
+                  </h:column>
+                   <h:column>
+                    <f:facet name="header">Wallet Amount</f:facet>
+                    <h:outputText value="#{u.walAmount}"/>
+                  </h:column>
+                   <h:column>
+                    <f:facet name="header">Wallet Source</f:facet>
+                    <h:outputText value="#{u.walSource}"/>
+                  </h:column>
+           
+                   <h:column> 
+                    <f:facet name="header">Update</f:facet>
+                    <h:commandButton action = "#{walletDao.searchWallet(u)}" value="Update" class="btn btn-primary"> 
+                    </h:commandButton>
+                </h:column>
+                <h:column> 
+                    <f:facet name="header">Delete</f:facet>
+                    <h:commandButton action = "#{walletDao.deleteWallet(u.walId)}" value="Delete" class="btn btn-danger"> 
+                    </h:commandButton>
+                </h:column>
+            </h:dataTable>
+            <center><h:commandButton action = "addWallet.xhtml?faces-redirect=true" value="Create New Wallet" class="btn btn-success"></h:commandButton> </center>
+    		</h:form>
+    	</h:body>   
+</html>
